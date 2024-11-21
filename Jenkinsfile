@@ -63,7 +63,7 @@ pipeline {
         //      steps {
         //          echo "Hello, ${PERSON}, nice to meet you."
         //      }
-        }
+        // }
       
     }
 // post build
