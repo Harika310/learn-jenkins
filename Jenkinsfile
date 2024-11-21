@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        label 'agent-1'
+    }
+    //  Build
     stages {
         stage('Build') {
             steps {
@@ -15,12 +18,12 @@ pipeline {
             steps {
 
                     sh 'echo This is deploy'
-                    error 'pipeline failed'
+                    // error 'pipeline failed'
 
             }
         }
     }
-
+// post build
     post {
         always{
             echo "This sections runs always"
