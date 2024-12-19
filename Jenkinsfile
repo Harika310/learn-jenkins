@@ -8,6 +8,18 @@ pipeline {
                            
         }
     }
+    post {
+        always{
+            echo "This sections runs always"
+            deleteDir()
+        }
+        success{
+            echo "This section run when pipeline success"
+        }
+        failure{
+            echo "This section run when pipeline failure"
+        }
+    }
 }
 
 // pipeline {
@@ -28,7 +40,7 @@ pipeline {
 
 //         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
 //     }
-//     //  Build
+    //  Build
 //     stages {
 //         stage('Build') {
 //             steps {
@@ -78,17 +90,17 @@ pipeline {
 //         // }
       
 //     }
-// post build
-    post {
-        always{
-            echo "This sections runs always"
-            deleteDir()
-        }
-        success{
-            echo "This section run when pipeline success"
-        }
-        failure{
-            echo "This section run when pipeline failure"
-        }
-    }
+// // post build
+//     post {
+//         always{
+//             echo "This sections runs always"
+//             deleteDir()
+//         }
+//         success{
+//             echo "This section run when pipeline success"
+//         }
+//         failure{
+//             echo "This section run when pipeline failure"
+//         }
+//     }
 // }
